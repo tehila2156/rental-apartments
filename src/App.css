@@ -1,0 +1,166 @@
+/* styles.css */
+/* גופן כללי ורקע */
+body {
+  font-family: 'Varela Round', sans-serif;
+  background-color: #f0fdf4; /* ירוק בהיר */
+  margin: 0;
+  padding: 0;
+  color: #1b4332;
+  direction: rtl; /* מכיוון שהטקסט בעברית */
+}
+
+/* כותרות וטקסט */
+h2, h5, p {
+  font-family: 'Varela Round', sans-serif;
+  margin: 6px 0;
+  font-weight: normal;
+}
+::placeholder{
+    font-family: 'Varela Round', sans-serif;
+
+}
+/* כפתורים */
+button {
+  background-color: #d9f99d; /* ירוק עדין */
+  color: #1b4332;
+  border: 2px solid #facc15; /* זהב עדין */
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bef264;
+  transform: scale(1.05);
+}
+
+/* קונטיינר הדירות ברשת */
+.apartment-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* דיב בודד */
+.apartment-card {
+  background-color: #b5ad86; /* ירוק מיוחד ועדין */
+  border: 2px solid #facc15; /* זהב */
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 64, 0, 0.1);
+  transition: 0.3s;
+}
+
+.apartment-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 64, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* תמונות */
+.apartment-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 12px 2px rgba(250, 204, 21, 0.5); /* זוהר זהב */
+}
+
+.show-details-btn {
+  background-color: #919269; /* זהב */
+  color: #3e431b;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 16px;
+  margin-top: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(107, 177, 121, 0.5); /* זוהר זהב */
+  transition: 0.3s;
+}
+
+.show-details-btn:hover {
+  background-color: #818261;
+  box-shadow: 0 0 10px rgba(107, 177, 121, 1.7);
+  transform: scale(1.05);
+}
+
+.filter-btn {
+  background-color: #a7a870;
+  color: #0d0e04;
+  border: none;
+  border-radius: 190px;
+  padding: 10px 22px;
+  font-size: 16px;
+  margin: 8px;
+  box-shadow: 0 0 10px rgba(185, 190, 108, 0.5);
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #bbc579;
+  box-shadow: 0 0 10px rgb(174, 171, 107);
+  transform: scale(1.05);
+}
+
+.home-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #a09160;
+  color: white;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.image-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 20px;
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.collage-img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* התאמת גובה שונה כדי ליצור מראה מעניין */
+.collage-img:nth-child(3n) {
+  grid-row: span 2;
+}
+
+.collage-img:nth-child(4n) {
+  grid-column: span 2;
+}
+
+/* עוטף כל הקומפוננטות */
+.app-wrapper {
+  direction: rtl;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: #f0fdf4;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+}
